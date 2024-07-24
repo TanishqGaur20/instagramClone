@@ -62,7 +62,7 @@ storys.addEventListener('click', (e) => {
         nxtIndex += 1;
         console.log(nxtIndex);
         shwstry.style.backgroundImage = `url(${Data[nxtIndex].story})`;
-    }, 100000)
+    }, 5000)
 
 })
 
