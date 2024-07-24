@@ -1,6 +1,6 @@
 @font-face {
     font-family: product sans;
-    src: url(PRODUCT\ SANS\ BOLD.TTF);
+    src: url(fonts/PRODUCT\ SANS\ BOLD.TTF);
 }
 
 @font-face {
@@ -25,7 +25,7 @@ body {
 }
 
 .card {
-    height: 650px;
+    height: 90vh;
     background-color: white;
     border-radius: 10px;
     width: 360px;
@@ -145,7 +145,7 @@ body {
 }
 
 .posts {
-    min-height: 50vh;
+    min-height: 70vh;
     width: 100%;
 }
 
