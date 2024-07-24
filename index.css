@@ -1,0 +1,327 @@
+@font-face {
+    font-family: product sans;
+    src: url(fonts/PRODUCT\ SANS\ BOLD.TTF);
+}
+
+@font-face {
+    font-family: product sans regular;
+    src: url(fonts/PRODUCT\ SANS\ REGULAR.TTF);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'product sans regular';
+}
+
+body {
+    background-color: cornflowerblue;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.card {
+    height: 650px;
+    background-color: white;
+    border-radius: 10px;
+    width: 360px;
+    border: 2px solid black;
+    position: relative;
+    overflow-y: auto;
+}
+
+.instaHead {
+    height: 40px;
+    width: 100%;
+    color: white;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px;
+    align-items: center;
+    background-color: black;
+}
+
+.card::-webkit-scrollbar {
+    display: none;
+}
+
+.storys {
+    height: 110px;
+    width: 100%;
+    padding: 10px 10px;
+    border-bottom: 1px solid gray;
+    background-color: black;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.storys::-webkit-scrollbar {
+    display: none;
+}
+
+.story {
+    cursor: pointer;
+    height: 80px;
+    display: inline-block;
+    width: 80px;
+    border: 3px solid red;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.story img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.shwStory {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    object-fit: cover;
+    object-position: center;
+    text-align: end;
+    perspective: 1000px;
+    padding: 15px;
+    z-index: 500;
+}
+
+.shwStory h1 {
+    position: absolute;
+    top: 1%;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: rgba(240, 248, 255, 0.544);
+    right: 2%;
+    font-size: 30px;
+    text-align: end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: rotate(45deg);
+}
+
+#sendMess {
+    /* position: absolute; */
+    height: 50px;
+    width: 72%;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.inputandIcon {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.inputandIcon i {
+    font-size: 25px;
+    color: white;
+}
+
+.like {
+    overflow: hidden;
+}
+
+.posts {
+    min-height: 50vh;
+    width: 100%;
+}
+
+.posts img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.imgandCaptionDiv {
+    height: 430px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.captionText {
+    height: 40px;
+    font-weight: 50;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 0px 10px;
+    border-bottom: 2px solid white;
+}
+
+.posts video {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.deleteAlertDiv {
+    height: 100px;
+    padding: 15px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    z-index: 50;
+    background-color: rgb(255, 244, 244);
+    width: 90%;
+    position: sticky;
+    top: 42%;
+    left: 5%;
+    border-radius: 15px;
+    z-index: 10;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+.deleteAlertDiv button {
+    padding: 5px 30px;
+    border: none;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: green;
+    color: white;
+    margin: 10px;
+    font-size: 17px;
+    border-radius: 50px;
+    transition: all .7s linear;
+    text-shadow: 1px 1px 2px black;
+}
+
+.deleteAlertDiv button:nth-child(1) {
+    background-color: red;
+}
+
+
+.addPostbtn {
+    position: sticky;
+    bottom: 0;
+    height: 40px;
+    background-color: black;
+    z-index: 50;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+}
+
+.addPostDiv {
+    /* position: absolute; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 460px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
+    background-color: black;
+}
+
+.addPostHead {
+    position: absolute;
+    top: 3%;
+    font-size: 20px;
+    color: white;
+}
+
+.addPostDiv input {
+    margin: 10px;
+    width: 90%;
+    height: 50px;
+    border-radius: 50px;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: none;
+}
+
+.addPostDiv .postbtn {
+    padding: 10px 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    margin: 10px;
+    border: none;
+    font-size: 20px;
+    border-radius: 50px;
+}
+
+.newPostHead {
+    font-size: 15px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    width: 100%;
+}
+
+.newPostHead i {
+    font-size: 20px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.newPostHead h3 {
+    font-weight: 50;
+}
+
+
+
+.imgbtn {
+    padding: 8px 20px;
+    color: black;
+    margin: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: none;
+    background-color: white;
+}
+
+.vdobtn {
+    cursor: pointer;
+    border: none;
+    padding: 8px 20px;
+    background-color: white;
+    color: black;
+    margin: 10px;
+    font-size: 17px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 50px;
+}
